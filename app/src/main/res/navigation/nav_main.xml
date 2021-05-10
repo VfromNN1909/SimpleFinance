@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/mainScreenFragment">
+
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="ru.vlasoff.simplefinance.presentation.MainScreenFragment"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_addExposeFragment"
+            app:destination="@id/addExposeFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_addIncomeFragment"
+            app:destination="@id/addIncomeFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_showExposeFragment"
+            app:destination="@id/showExposeFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_showIncomeFragment"
+            app:destination="@id/showIncomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addExposeFragment"
+        android:name="ru.vlasoff.simplefinance.presentation.AddExposeFragment"
+        android:label="fragment_add_expose"
+        tools:layout="@layout/fragment_add_expose" >
+        <action
+            android:id="@+id/action_addExposeFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addIncomeFragment"
+        android:name="ru.vlasoff.simplefinance.presentation.AddIncomeFragment"
+        android:label="fragment_add_income"
+        tools:layout="@layout/fragment_add_income" >
+        <action
+            android:id="@+id/action_addIncomeFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showExposeFragment"
+        android:name="ru.vlasoff.simplefinance.presentation.ShowExposeFragment"
+        android:label="fragment_show_expose"
+        tools:layout="@layout/fragment_show_expose" />
+    <fragment
+        android:id="@+id/showIncomeFragment"
+        android:name="ru.vlasoff.simplefinance.presentation.ShowIncomeFragment"
+        android:label="fragment_show_income"
+        tools:layout="@layout/fragment_show_income" >
+        <action
+            android:id="@+id/action_showIncomeFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
+</navigation>
